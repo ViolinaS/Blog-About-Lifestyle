@@ -1,0 +1,897 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    min-width: 1600px;
+}
+
+/* Шапка Сайта  */
+
+header {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 141px;
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
+    background-color: #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+header::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+
+.navigation-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 64px;
+    width: 1200px;
+}
+
+.imagebox {
+    width: 179px;
+    min-height: 41px;
+    z-index: 1;
+}
+
+.menu {
+    z-index: 1;
+    padding: 0px;
+}
+
+.list-menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Open Sans";
+    text-align: center;
+    font-style: normal;
+    line-height: 36px;
+    text-transform: uppercase;
+    list-style-type: none;
+    min-width: 464px;
+    min-height: 17px;
+    padding-left: 0px;
+}
+
+.list-menu>.menu-child:not(:last-child) {
+    margin-right: 36px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link-menu:hover {
+    color: #b59f5b;
+}
+
+.title {
+    max-width: 710px;
+    min-height: 151px;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 75px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Основной контент */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 230px;
+    margin-right: 230px;
+    padding: 0 0px 42px 0px;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 15px 0 15px;
+}
+
+.main {
+    width: 777px;
+    padding-right: 0px;
+    padding-left: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main>.main-article:nth-child(n + 2) {
+    margin-top: 60px;
+}
+
+.main-article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 294px;
+    padding: 0;
+}
+
+.picture-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.picture {
+    width: 380px;
+    min-height: 294px;
+    padding-top: 16px;
+}
+
+.story {
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.frame {
+    min-height: 115px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.frame-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+.frame-list>.frame-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.story-link {
+    text-decoration: none;
+}
+
+.story-link:hover {
+    text-decoration: underline #b59f5b;
+}
+
+.story-tag {
+    font-size: 14px;
+    line-height: 40px;
+    color: #b59f5b;
+    font-weight: 700;
+    font-family: "Open Sans";
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.story-tag:hover {
+    color: #323232;
+}
+
+h2 {
+    margin: 0;
+    line-height: 0;
+}
+
+.story-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans";
+    font-style: normal;
+    text-transform: uppercase;
+
+    min-width: 330px;
+    min-height: 40px;
+    display: inline-block;
+}
+
+.story-title:hover {
+    color: #b59f5b;
+}
+
+.story-date {
+    font-size: 12px;
+    line-height: 40px;
+    color: #888888;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-style: normal;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.author {
+    font-size: 12px;
+    line-height: 40px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Open Sans";
+    font-style: normal;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.story-text {
+    min-width: 350px;
+    min-height: 59px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-style: normal;
+}
+
+/* Боковая панель  */
+
+.sidebar {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.new-posts {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.new-posts>.post-wrapper:nth-child(n + 2) {
+    margin-bottom: 10px;
+}
+
+.sideheader-box {
+    min-width: 78px;
+    min-height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: #b59f5b;
+}
+
+.sideheader {
+    font-size: 14px;
+    line-height: 29px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans";
+    font-style: normal;
+    text-transform: uppercase;
+    margin-left: 86px;
+    margin-right: 49px;
+    text-align: center;
+}
+
+.sideheader::after {
+    content: "";
+    display: block;
+    width: 66px;
+    padding-top: 1px;
+    border-bottom: 3px solid #b59f5b;
+    opacity: 0.4;
+    margin-left: 106px;
+    margin-right: 98px;
+    height: 3px;
+}
+
+.sideheader:hover {
+    color: #b59f5b;
+}
+
+.post-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    min-height: 70px;
+}
+
+.post-image-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.post-image {
+    min-height: 72px;
+    width: 71px;
+    padding-top: 10px;
+}
+
+.post-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.post-date {
+    font-size: 12px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-style: normal;
+    display: inline-block;
+}
+
+h3 {
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.post-title {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Open Sans";
+    font-style: normal;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.post-title:hover {
+    color: #b59f5b;
+}
+
+.search {
+    min-height: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.search-text {
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-style: normal;
+    background-color: #f4f7f6;
+    border: none;
+    min-width: 220px;
+    min-height: 50px;
+}
+
+.search-text:focus {
+    box-sizing: border-box;
+    min-width: 220px;
+    min-height: 49px;
+    left: 1px;
+    top: 1px;
+
+    background-color: #f4f7f6;
+    border: 1px solid #b59f5b;
+    outline: none;
+}
+
+.search-btn {
+    min-width: 50px;
+    min-height: 50px;
+    box-sizing: border-box;
+    border: none;
+
+    background-color: #b59f5b;
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center center;
+}
+
+.search-btn:hover {
+    min-width: 50px;
+    min-height: 50px;
+    background: #323232;
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.subscribe {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 164px;
+}
+
+.mailing-list {
+    min-width: 270px;
+    min-height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.mailing-list-title {
+    font-size: 14px;
+    line-height: 29px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 78px;
+    min-height: 27px;
+    display: inline-block;
+    align-items: center;
+}
+
+.mailing-list-title::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #b59f5b;
+    opacity: 0.4;
+    width: 64px;
+    height: 3px;
+    margin-left: 95px;
+    margin-right: 95px;
+    padding-top: 1px;
+}
+
+.mailing-list-title:hover {
+    color: #b59f5b;
+}
+
+.mailing-list-field {
+    min-width: 270px;
+    min-height: 51px;
+    margin-top: 22px;
+}
+
+.email-form {
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-style: normal;
+    background-color: #f4f7f6;
+    border: none;
+    min-width: 270px;
+    min-height: 50px;
+}
+
+.email-form:focus {
+    box-sizing: border-box;
+    min-width: 270px;
+    min-height: 49px;
+
+    background-color: #f4f7f6;
+    border: 1px solid #b59f5b;
+    outline: none;
+}
+
+.subscribe-btn {
+    width: 270px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    background: #b59f5b;
+    border: none;
+    margin-top: 15px;
+}
+
+.subscribe-btn:focus {
+    background-color: #323232;
+    border: 1px solid #b59f5b;
+    outline: none;
+}
+
+.subscribe-btn:hover {
+    cursor: pointer;
+    background-color: #323232;
+}
+
+.tags {
+    margin-top: 60px;
+    min-height: 156px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tags-title-box {
+    min-width: 78px;
+    min-height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.tags-title {
+    font-size: 14px;
+    line-height: 29px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 78px;
+    min-height: 27px;
+    display: inline-block;
+    align-items: center;
+}
+
+.tags-title::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #b59f5b;
+    opacity: 0.4;
+    width: 64px;
+    height: 3px;
+    margin-left: 95px;
+    margin-right: 95px;
+    padding-top: 1px;
+}
+
+.tags-title:hover {
+    color: #b59f5b;
+}
+
+.tags-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px;
+    width: 268px;
+    margin-top: 20px;
+}
+
+.tag {
+    min-height: 30px;
+
+    text-transform: uppercase;
+    border: 3px solid #eeeeee;
+
+    font-size: 12px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+.tag:hover {
+    border: 3px solid #b59f5b;
+}
+
+.tag:nth-child(n + 1) {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.tag:first-child {
+    min-width: 86px;
+}
+
+.tag:nth-child(2) {
+    min-width: 75px;
+}
+
+.tag:nth-child(3) {
+    min-width: 90px;
+}
+
+.tag:nth-child(4) {
+    min-width: 59px;
+}
+
+.tag:nth-child(5) {
+    min-width: 83px;
+}
+
+.tag:nth-child(6) {
+    min-width: 77px;
+}
+
+.tag:nth-child(7) {
+    min-width: 65px;
+}
+
+.tag:nth-child(8) {
+    min-width: 76px;
+}
+
+.tag-link {
+    text-decoration: none;
+    color: #0f0d0e;
+}
+
+.tag-link:hover {
+    color: #b59f5b;
+}
+
+.topics {
+    padding: 0;
+    margin-top: 60px;
+    min-height: 321px;
+}
+
+.topics-title-box {
+    min-width: 78px;
+    min-height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.topic-title {
+    font-size: 14px;
+    line-height: 29px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 78px;
+    min-height: 27px;
+    display: inline-block;
+    align-items: center;
+}
+
+.topic-title::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #b59f5b;
+    opacity: 0.4;
+    width: 64px;
+    height: 3px;
+    margin-left: 95px;
+    margin-right: 95px;
+    padding-top: 1px;
+}
+
+.topic-title:hover {
+    color: #b59f5b;
+}
+
+.topics-list {
+    list-style-type: none;
+    min-width: 270px;
+    min-height: 268px;
+    padding: 0px;
+}
+
+.topic {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 47px;
+    color: #000000;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.topic:hover {
+    border: 2px solid #b59f5b;
+}
+
+.topic-link {
+    text-decoration: none;
+    color: #0f0d0e;
+}
+
+.topic-link:hover {
+    color: #b59f5b;
+}
+
+.views {
+    font-size: 12px;
+    line-height: 36px;
+    color: #b59f5b;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Подвал  */
+
+.footer {
+    width: 1200px;
+    margin-top: 64px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f4f7f6;
+
+    width: 1170px;
+    min-height: 84px;
+    margin-bottom: 40px;
+}
+
+.link-dribble {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-pinterest {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-tumbler {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.copyright-wrapper {
+    min-width: 100px;
+    min-height: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.copyright {
+    font-size: 12px;
+    line-height: 40px;
+    color: #999999;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
